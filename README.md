@@ -2,6 +2,10 @@
 
 [简体中文](./README-zh_CN.md) | [English](./README.md)
 
+![Preview](https://github.com/MikuTrive/MachineLearning/blob/main/Images/1.png)
+
+![Preview](https://github.com/MikuTrive/MachineLearning/blob/main/Images/2.png)
+
 **Machine Learning** is a native Linux desktop teaching application for the **Machine** programming language, written in **C** with **GTK4**, **GtkSourceView 5**, and **SQLite3**.
 
 This first scaffold already implements:
