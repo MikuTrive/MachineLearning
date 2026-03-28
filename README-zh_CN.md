@@ -2,6 +2,9 @@
 
 [简体中文](./README-zh_CN.md) | [English](./README.md)
 
+![Preview](https://github.com/MikuTrive/MachineLearning/blob/main/Images/1.png)
+![Preview](https://github.com/MikuTrive/MachineLearning/blob/main/Images/2.png)
+
 **Machine Learning** 是一个面向 **Machine** 编程语言的原生 Linux 桌面教学应用，使用 **C**、**GTK4**、**GtkSourceView 5** 和 **SQLite3** 编写。
 
 当前这个第一阶段脚手架已经实现了以下内容：
