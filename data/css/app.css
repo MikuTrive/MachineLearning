@@ -1,0 +1,365 @@
+window,
+headerbar,
+label,
+button,
+textview,
+text,
+box,
+list,
+row,
+scrolledwindow {
+  font-family: "Cascadia Code", monospace;
+  font-weight: 800;
+}
+
+window {
+  background: linear-gradient(180deg, #071226 0%, #08132b 48%, #061127 100%);
+  color: #e5eefc;
+}
+
+.app-shell {
+  padding: 20px;
+  border-spacing: 0;
+}
+
+.app-content {
+  border-spacing: 18px;
+}
+
+.app-headerbar {
+  background: rgba(5, 11, 24, 0.95);
+  color: #dbeafe;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.12);
+  box-shadow: none;
+}
+
+.panel-card,
+.hero-card {
+  background: linear-gradient(180deg, rgba(8, 20, 48, 0.98) 0%, rgba(6, 17, 39, 0.98) 100%);
+  border: 1px solid rgba(61, 100, 180, 0.28);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 18px 46px rgba(2, 8, 23, 0.34);
+}
+
+.hero-card {
+  padding: 22px;
+}
+
+.content-column,
+.editor-column {
+  border-spacing: 16px;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #f8fbff;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d8e5fb;
+}
+
+.section-label,
+.section-title,
+.content-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #f8fbff;
+}
+
+.content-body,
+.value-label,
+.lesson-hint,
+.muted-label,
+.status-pill,
+.terminal-empty-label {
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.content-body,
+.value-label {
+  color: #f3f6ff;
+  font-weight: 700;
+}
+
+.muted-label,
+.lesson-hint,
+.terminal-empty-label {
+  color: #9fb2d9;
+  font-weight: 650;
+}
+
+.info-row {
+  border-spacing: 4px;
+}
+
+.lesson-list {
+  background: transparent;
+}
+
+.lesson-row {
+  border-radius: 18px;
+  margin-bottom: 8px;
+  padding: 10px;
+  background: rgba(17, 31, 63, 0.92);
+  border: 1px solid transparent;
+}
+
+.lesson-row:selected {
+  background: rgba(19, 53, 101, 0.96);
+  border-color: rgba(112, 175, 255, 0.46);
+}
+
+.lesson-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #f5f8ff;
+}
+
+button {
+  min-height: 38px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(118, 153, 225, 0.28);
+  background: rgba(17, 31, 63, 0.96);
+  color: #f5f8ff;
+  box-shadow: none;
+}
+
+button:hover {
+  background: rgba(34, 53, 96, 0.98);
+}
+
+.accent-button {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  border-color: rgba(191, 219, 254, 0.28);
+}
+
+.accent-button:hover {
+  background: linear-gradient(135deg, #3270f0 0%, #8950f5 100%);
+}
+
+.run-button {
+  padding: 8px 16px;
+  min-width: 112px;
+}
+
+.run-button label {
+  font-weight: 800;
+}
+
+.status-pill {
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: rgba(37, 99, 235, 0.16);
+  color: #dbeafe;
+}
+
+.banner-box {
+  margin-bottom: 16px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+}
+
+.banner-label {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.banner-success {
+  background: rgba(22, 163, 74, 0.96);
+  border-color: rgba(134, 239, 172, 0.38);
+}
+
+.banner-warning {
+  background: rgba(202, 138, 4, 0.96);
+  border-color: rgba(253, 224, 71, 0.42);
+}
+
+.banner-error {
+  background: rgba(220, 38, 38, 0.96);
+  border-color: rgba(252, 165, 165, 0.4);
+}
+
+.fold-toggle-button {
+  min-width: 26px;
+  min-height: 26px;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(12, 25, 49, 0.96);
+}
+
+.fold-toggle-button:hover {
+  background: rgba(23, 38, 73, 0.98);
+}
+
+.fold-content {
+  border-spacing: 10px;
+}
+
+.code-surface,
+.code-surface text,
+.code-surface border,
+.code-surface gutter,
+.code-surface gutter renderer,
+textview.code-surface,
+textview.code-surface text,
+.terminal-surface,
+.terminal-surface text,
+textview.terminal-surface,
+textview.terminal-surface text {
+  background: #000000;
+  color: #ffffff;
+  border-radius: 18px;
+}
+
+.code-surface,
+.terminal-surface {
+  font-family: "Cascadia Code", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  caret-color: #ffffff;
+}
+
+.code-surface gutter,
+.code-surface gutter renderer {
+  color: #ffffff;
+}
+
+.terminal-card scrolledwindow {
+  min-height: 180px;
+}
+
+.editor-column scrolledwindow {
+  min-height: 280px;
+}
+
+.app-content > scrolledwindow {
+  min-height: 0;
+}
+
+.editor-header-row {
+  border-spacing: 12px;
+}
+
+.titlebar-dots {
+  border-spacing: 8px;
+}
+
+.titlebar-dot-button {
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0;
+  margin: 0 4px 0 0;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.titlebar-dot-button:hover {
+  opacity: 0.9;
+}
+
+.titlebar-dot-button:active {
+  opacity: 0.78;
+}
+
+.titlebar-title {
+  font-size: 15px;
+  color: #cbd5e1;
+  font-weight: 700;
+}
+
+
+.lang-zh label,
+.lang-zh button,
+.lang-zh textview,
+.lang-zh text {
+  font-weight: 850;
+}
+
+.lesson-title-row {
+  border-spacing: 8px;
+}
+
+.lesson-badge {
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.lesson-badge-normal {
+  background: rgba(17, 46, 109, 0.95);
+  color: #a9c7ff;
+  border: 1px solid rgba(122, 164, 255, 0.42);
+}
+
+.lesson-badge-hard {
+  background: rgba(113, 53, 8, 0.95);
+  color: #ffd4a5;
+  border: 1px solid rgba(255, 188, 112, 0.4);
+}
+
+.lesson-badge-extreme {
+  background: rgba(109, 18, 18, 0.96);
+  color: #ffb4b4;
+  border: 1px solid rgba(255, 158, 158, 0.42);
+}
+
+.lesson-badge-advanced {
+  background: rgba(62, 21, 108, 0.96);
+  color: #d6b4ff;
+  border: 1px solid rgba(201, 153, 255, 0.42);
+}
+
+.titlebar-gear-button {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(12, 25, 49, 0.96);
+}
+
+.titlebar-gear-button:hover {
+  background: rgba(23, 38, 73, 0.98);
+}
+
+.settings-shell {
+  min-width: 380px;
+}
+
+.settings-row,
+.titlebar-left {
+  border-spacing: 12px;
+}
+
+.settings-select-button {
+  min-width: 180px;
+}
+
+.quiz-choice-button {
+  border-radius: 14px;
+  min-height: 34px;
+  justify-content: flex-start;
+}
+
+.quiz-choice-button check,
+.quiz-choice-button radio {
+  min-width: 14px;
+  min-height: 14px;
+}
+
+.tooltip,
+tooltip {
+  font-family: "Cascadia Code", monospace;
+  font-weight: 800;
+}

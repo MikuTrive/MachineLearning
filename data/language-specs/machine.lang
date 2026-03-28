@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language id="machine" _name="Machine" version="2.0" _section="Source">
+  <metadata>
+    <property name="globs">*.mne</property>
+    <property name="line-comment-start">--</property>
+  </metadata>
+
+  <styles>
+    <style id="comment" name="Comment" map-to="def:comment"/>
+    <style id="string" name="String" map-to="def:string"/>
+    <style id="number" name="Number" map-to="def:number"/>
+    <style id="keyword" name="Keyword" map-to="def:keyword"/>
+    <style id="type" name="Type" map-to="def:type"/>
+    <style id="builtin" name="Builtin" map-to="def:function"/>
+    <style id="directive" name="Directive" map-to="def:preprocessor"/>
+    <style id="operator" name="Operator" map-to="def:operator"/>
+    <style id="boolean" name="Boolean" map-to="def:boolean"/>
+  </styles>
+
+  <definitions>
+    <context id="comment" style-ref="def:comment" end-at-line-end="true">
+      <start>--</start>
+    </context>
+
+    <context id="string" style-ref="def:string" end-at-line-end="true">
+      <start>"</start>
+      <end>"</end>
+      <include>
+        <context ref="def:escaped-character"/>
+      </include>
+    </context>
+
+    <context id="number" style-ref="def:number">
+      <match>\b[0-9]+(\.[0-9]+)?\b</match>
+    </context>
+
+    <context id="directive" style-ref="def:preprocessor">
+      <match>^\s*bin\.runtime\b</match>
+      <match>^\s*unsafe\.enable\b</match>
+      <match>^\s*target\.[A-Za-z0-9_-]+\b</match>
+      <match>^\s*backend\.[A-Za-z0-9_-]+\b</match>
+    </context>
+
+    <context id="keyword" style-ref="def:keyword">
+      <keyword>main</keyword>
+      <keyword>func</keyword>
+      <keyword>struct</keyword>
+      <keyword>var</keyword>
+      <keyword>const</keyword>
+      <keyword>if</keyword>
+      <keyword>else</keyword>
+      <keyword>elif</keyword>
+      <keyword>while</keyword>
+      <keyword>print</keyword>
+      <keyword>ret</keyword>
+      <keyword>goto</keyword>
+      <keyword>label</keyword>
+      <keyword>switch</keyword>
+      <keyword>case</keyword>
+      <keyword>default</keyword>
+      <keyword>module</keyword>
+      <keyword>unsafe</keyword>
+    </context>
+
+    <context id="boolean" style-ref="def:boolean">
+      <keyword>true</keyword>
+      <keyword>false</keyword>
+    </context>
+
+    <context id="type" style-ref="def:type">
+      <keyword>i64</keyword>
+      <keyword>f64</keyword>
+      <keyword>hp</keyword>
+      <keyword>str</keyword>
+      <keyword>ptr</keyword>
+      <keyword>list</keyword>
+      <keyword>array</keyword>
+      <keyword>bool</keyword>
+      <keyword>void</keyword>
+    </context>
+
+    <context id="builtin" style-ref="def:function">
+      <keyword>len</keyword>
+      <keyword>hp</keyword>
+      <keyword>sqrt</keyword>
+      <keyword>sin</keyword>
+      <keyword>cos</keyword>
+      <keyword>pow</keyword>
+      <keyword>hp_add</keyword>
+      <keyword>hp_sub</keyword>
+      <keyword>hp_mul</keyword>
+      <keyword>hp_div</keyword>
+      <keyword>hp_sqrt</keyword>
+      <keyword>hp_pow</keyword>
+      <keyword>alloc_bytes</keyword>
+      <keyword>free_mem</keyword>
+      <keyword>store_i64</keyword>
+      <keyword>load_i64</keyword>
+      <keyword>store_f64</keyword>
+      <keyword>load_f64</keyword>
+      <keyword>store_str</keyword>
+      <keyword>load_str</keyword>
+      <keyword>ptr_from_i64</keyword>
+      <keyword>ptr_to_i64</keyword>
+      <keyword>ptr_offset</keyword>
+      <keyword>store_u8</keyword>
+      <keyword>store_u16</keyword>
+      <keyword>store_u32</keyword>
+      <keyword>store_u64</keyword>
+      <keyword>load_u8</keyword>
+      <keyword>load_u16</keyword>
+      <keyword>load_u32</keyword>
+      <keyword>load_u64</keyword>
+      <keyword>volatile_store_u8</keyword>
+      <keyword>volatile_store_u16</keyword>
+      <keyword>volatile_store_u32</keyword>
+      <keyword>volatile_store_u64</keyword>
+      <keyword>volatile_load_u8</keyword>
+      <keyword>volatile_load_u16</keyword>
+      <keyword>volatile_load_u32</keyword>
+      <keyword>volatile_load_u64</keyword>
+      <keyword>syscall0</keyword>
+      <keyword>syscall1</keyword>
+      <keyword>syscall2</keyword>
+      <keyword>syscall3</keyword>
+      <keyword>syscall4</keyword>
+      <keyword>syscall5</keyword>
+      <keyword>syscall6</keyword>
+      <keyword>mmap_anon</keyword>
+      <keyword>mmap_anon_exec</keyword>
+      <keyword>munmap_mem</keyword>
+      <keyword>fd_open_ro</keyword>
+      <keyword>fd_open_wo</keyword>
+      <keyword>fd_open_rw</keyword>
+      <keyword>fd_close</keyword>
+      <keyword>fd_read</keyword>
+      <keyword>fd_write</keyword>
+      <keyword>fd_seek</keyword>
+      <keyword>ioctl_i64</keyword>
+      <keyword>asm_nop</keyword>
+      <keyword>asm_pause</keyword>
+      <keyword>asm_mfence</keyword>
+      <keyword>asm_lfence</keyword>
+      <keyword>asm_sfence</keyword>
+      <keyword>asm_rdtsc</keyword>
+      <keyword>cpu_in8</keyword>
+      <keyword>cpu_out8</keyword>
+      <keyword>pmm_alloc_page</keyword>
+      <keyword>pmm_alloc_pages</keyword>
+      <keyword>pmm_total_bytes</keyword>
+      <keyword>pmm_used_bytes</keyword>
+      <keyword>page_identity_map_2m</keyword>
+      <keyword>apic_supported</keyword>
+      <keyword>apic_enable</keyword>
+      <keyword>apic_eoi</keyword>
+      <keyword>list_new</keyword>
+      <keyword>list_push_back</keyword>
+      <keyword>list_get</keyword>
+      <keyword>list_size</keyword>
+      <keyword>list_free</keyword>
+      <keyword>array_new</keyword>
+      <keyword>array_push</keyword>
+      <keyword>array_get</keyword>
+      <keyword>array_set</keyword>
+      <keyword>array_len</keyword>
+      <keyword>array_free</keyword>
+      <keyword>grid_new</keyword>
+      <keyword>grid_get</keyword>
+      <keyword>grid_set</keyword>
+      <keyword>grid_rows</keyword>
+      <keyword>grid_cols</keyword>
+      <keyword>grid_fill</keyword>
+      <keyword>grid_free</keyword>
+      <keyword>term_enable_raw</keyword>
+      <keyword>term_disable_raw</keyword>
+      <keyword>term_key_available</keyword>
+      <keyword>term_read_key</keyword>
+      <keyword>term_enable_mouse</keyword>
+      <keyword>term_disable_mouse</keyword>
+      <keyword>term_poll_event</keyword>
+      <keyword>term_last_key</keyword>
+      <keyword>term_mouse_x</keyword>
+      <keyword>term_mouse_y</keyword>
+      <keyword>term_mouse_button</keyword>
+      <keyword>term_clear</keyword>
+      <keyword>term_flush</keyword>
+      <keyword>term_move_cursor</keyword>
+      <keyword>term_hide_cursor</keyword>
+      <keyword>term_show_cursor</keyword>
+      <keyword>term_draw_text</keyword>
+      <keyword>sleep_ms</keyword>
+      <keyword>tick_ms</keyword>
+      <keyword>timer_reset</keyword>
+      <keyword>timer_elapsed_ms</keyword>
+      <keyword>win_create</keyword>
+      <keyword>win_destroy</keyword>
+      <keyword>win_is_open</keyword>
+      <keyword>win_poll_event</keyword>
+      <keyword>win_last_key</keyword>
+      <keyword>win_mouse_x</keyword>
+      <keyword>win_mouse_y</keyword>
+      <keyword>win_mouse_button</keyword>
+      <keyword>win_clear</keyword>
+      <keyword>win_present</keyword>
+      <keyword>win_set_title</keyword>
+      <keyword>win_draw_rect</keyword>
+      <keyword>win_fill_rect</keyword>
+      <keyword>win_draw_line</keyword>
+      <keyword>win_draw_pixel</keyword>
+      <keyword>win_draw_text</keyword>
+      <keyword>image_load</keyword>
+      <keyword>image_draw</keyword>
+      <keyword>image_draw_scaled</keyword>
+      <keyword>image_width</keyword>
+      <keyword>image_height</keyword>
+      <keyword>image_free</keyword>
+      <keyword>video_play</keyword>
+      <keyword>video_stop</keyword>
+      <keyword>video_is_running</keyword>
+      <keyword>addr</keyword>
+      <keyword>index</keyword>
+    </context>
+
+    <context id="operator" style-ref="def:operator">
+      <match>(==|!=|&lt;=|&gt;=|&amp;&amp;|\|\||[-+*/%=&lt;&gt;@^.:,\[\]()])</match>
+    </context>
+
+
+    <context id="function-name" style-ref="def:function">
+      <match>^[ \t]*func\s+[A-Za-z_][A-Za-z0-9_]*</match>
+    </context>
+
+    <context id="module-name" style-ref="def:identifier">
+      <match>^[ \t]*module\s+[A-Za-z_][A-Za-z0-9_]*</match>
+    </context>
+
+    <context id="type-name" style-ref="def:type">
+      <match>^[ \t]*struct\s+[A-Za-z_][A-Za-z0-9_]*</match>
+    </context>
+
+    <context id="machine">
+      <include>
+        <context ref="comment"/>
+        <context ref="string"/>
+        <context ref="number"/>
+        <context ref="directive"/>
+        <context ref="function-name"/>
+        <context ref="module-name"/>
+        <context ref="type-name"/>
+        <context ref="keyword"/>
+        <context ref="boolean"/>
+        <context ref="type"/>
+        <context ref="builtin"/>
+        <context ref="operator"/>
+      </include>
+    </context>
+  </definitions>
+</language>

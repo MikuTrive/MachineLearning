@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="machine-vim-dark" _name="Machine Vim Dark" version="1.0">
+  <author>OpenAI</author>
+  <description>High-contrast dark scheme for Machine .mne editing, aligned to the current Machine Vim syntax groups.</description>
+
+  <color name="bg" value="#000000"/>
+  <color name="fg" value="#ffffff"/>
+  <color name="fg-soft" value="#d4d4d4"/>
+  <color name="comment" value="#6a9955"/>
+  <color name="string" value="#ce9178"/>
+  <color name="number" value="#b5cea8"/>
+  <color name="keyword" value="#569cd6"/>
+  <color name="type" value="#4ec9b0"/>
+  <color name="builtin" value="#dcdcaa"/>
+  <color name="directive" value="#c586c0"/>
+  <color name="boolean" value="#569cd6"/>
+  <color name="operator" value="#f3f4f6"/>
+  <color name="selection" value="#1f3a5f"/>
+  <color name="line-current" value="#0f1115"/>
+  <color name="line-number" value="#ffffff"/>
+  <color name="line-number-current" value="#ffffff"/>
+  <color name="cursor" value="#ffffff"/>
+  <color name="bracket-match" value="#264f78"/>
+  <color name="bracket-border" value="#9cdcfe"/>
+
+  <style name="text" foreground="fg" background="bg"/>
+  <style name="selection" background="selection"/>
+  <style name="current-line" background="line-current"/>
+  <style name="line-numbers" foreground="line-number" background="bg"/>
+  <style name="current-line-number" foreground="line-number-current" background="bg" bold="true"/>
+  <style name="cursor" foreground="bg" background="cursor"/>
+  <style name="bracket-match" foreground="fg" background="bracket-match" bold="true"/>
+  <style name="bracket-mismatch" foreground="#ffffff" background="#7f1d1d" bold="true"/>
+
+  <style name="def:comment" foreground="comment" italic="true"/>
+  <style name="def:string" foreground="string"/>
+  <style name="def:number" foreground="number"/>
+  <style name="def:keyword" foreground="keyword" bold="true"/>
+  <style name="def:type" foreground="type"/>
+  <style name="def:function" foreground="builtin"/>
+  <style name="def:identifier" foreground="fg-soft"/>
+  <style name="def:preprocessor" foreground="directive" bold="true"/>
+  <style name="def:boolean" foreground="boolean" bold="true"/>
+  <style name="def:operator" foreground="operator"/>
+</style-scheme>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Machine Learning
+GenericName=Machine language teaching software
+Comment=Learn the Machine programming language on Linux
+Exec=machine-learning
+Icon=machine-learning
+Terminal=false
+Categories=Education;Development;GTK;
+Keywords=Machine;Programming;Learning;Compiler;
+StartupNotify=true
